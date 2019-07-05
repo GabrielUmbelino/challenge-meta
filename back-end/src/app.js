@@ -13,13 +13,10 @@ export default (port) => {
   app.use(helmet());
 
   enableLogging(app);
-  console.log("[app.js log] ");
 
   app.use(express.static(path.join(__dirname, "public")))
     .use("/", router)
     .use((req, res, next) => {
-      console.log("app.js [log] ", req);
-
       next(createError(HttpStatus.NOT_FOUND));
     });
 

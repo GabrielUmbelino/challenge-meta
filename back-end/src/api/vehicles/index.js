@@ -5,7 +5,6 @@ import { Router } from "express";
 import { vehicles as db } from "../../db";
 
 const router = new Router();
-console.log("[vehicles/index.js log] vehicles");
 
 export default router;
 
@@ -45,7 +44,6 @@ router
 router
   .route("/")
   .post((req, res) => {
-    console.log("[vehicles/index.js log] post vehicles");
     db.insert(req.body, (err, doc) => {
       if (err) {
         res.status(HttpStatus.INTERNAL_SERVER_ERROR).send();
