@@ -15,5 +15,4 @@ router
   }));
 
 router
-  // .use(Filters.checkVehicleData)
   .use("/vehicles", vehicles);

@@ -13,7 +13,7 @@ export default new Router({
     {
       path: '/vehicle',
       name: "vehicle",
-      component: () => import("./components/Vehicle.vue")
+      component: () => import("./views/Vehicle.vue")
     }
   ]
 })
