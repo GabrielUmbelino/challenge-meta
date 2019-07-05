@@ -29,10 +29,10 @@
               </v-layout>
               <v-layout row>
                 <v-flex xs12 sm6>
-                   <v-select v-model="vehicle.type" :items="Object.keys(types)" :error-messages="typeErrors" :disabled="isEditing" @change="() => vehicle.numberOfPassengers = types[vehicle.type].passengers" label="Standard" ></v-select>
+                   <v-select v-model="vehicle.type" :items="Object.keys(types)" :error-messages="typeErrors" :disabled="isEditing" @change="() => vehicle.numberOfPassengers = types[vehicle.type].passengers" label="Type" ></v-select>
                 </v-flex>
                 <v-flex xs12 sm6>
-                  <v-text-field :value="vehicle.numberOfPassengers" :error-messages="passengersErrors" disabled label="Standard" ></v-text-field>
+                  <v-text-field :value="vehicle.numberOfPassengers" :error-messages="passengersErrors" disabled label="Passengers" ></v-text-field>
                 </v-flex>
               </v-layout>
               <v-layout row>
